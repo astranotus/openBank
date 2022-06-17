@@ -17,9 +17,6 @@ allure {
     }
 }
 
-group 'org.QA'
-version '1.0-SNAPSHOT'
-
 repositories {
     mavenCentral()
 }
@@ -33,8 +30,10 @@ dependencies {
             "com.codeborne:selenide:6.5.0",
             "org.junit.jupiter:junit-jupiter:5.8.2",
             "org.slf4j:slf4j-simple:1.7.36",
-
+            'com.codeborne:selenide:6.6.3',
+            'io.qameta.allure:allure-selenide:2.18.1',
     )
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.8.2')
 }
 
 tasks.withType(JavaCompile) {

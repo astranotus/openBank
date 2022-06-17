@@ -7,6 +7,7 @@ public class MainPage {
 
     public MainPage openPage() {
         open("");
+
         return this;
     }
 
