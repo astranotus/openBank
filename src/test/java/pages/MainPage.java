@@ -1,6 +1,7 @@
 package pages;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
@@ -17,8 +18,8 @@ public class MainPage {
         return this;
     }
 
-    public MainPage clickOpenMainMenu(String value) {
-        $$(".main-page-header__links-wrapper").find(text(value)).click();
+    public MainPage checkOpenMainMenu(String value) {
+        $$(".main-page-header__links-wrapper").find(text(value)).shouldBe(visible);
 
         return this;
     }
