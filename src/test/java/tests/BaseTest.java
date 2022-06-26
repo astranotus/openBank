@@ -33,19 +33,12 @@ public class BaseTest {
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
     }
 
-    @BeforeEach
-    public void setUp() {
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--disable-extensions");
-        closeWebDriver();
-        open(baseUrl);
-    }
-
     @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
+        closeWebDriver();
     }
 }
