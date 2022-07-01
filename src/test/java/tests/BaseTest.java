@@ -32,7 +32,7 @@ public class BaseTest {
 
     @BeforeEach
     public void beforeEach() {
-        Selenide.open(baseUrl);
+        //Selenide.open(baseUrl);
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
